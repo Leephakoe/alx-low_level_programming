@@ -1,38 +1,23 @@
-#include <stdio.h>
-
- 
-
-int main () {
-
-
-
-	   /* local variable definition */
-
-	   int n = 0;
-
-	    
-
-	      /* check the boolean condition */
-
-	      if( n < 0 ) {
-
-		            /* if condition is true then print the following */
-
-		            printf("n is less than 20\n" );
-
-			       } else {
-
-				             /* if condition is false then print the following */
-				             printf("n is not less than 20\n" );
-
-					        }
-
-	         
-
-	         printf("value of n is : %d\n", a);
-
-		  
-
-		    return 0;
-
+#include <stdlib.h>
+#include <time.h>
+#include < stdio.h>
+/**
+ * main-To print whether the number stored in the variable n is positive or negative
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int n ;
+	srand (time(0));
+	n = rand () - RAND_MAX /2;
+      	if (n>0)
+{
+	printf("%d is positive\n",n);
+}
+else
+{
+	printf("%d is negative\n",n);
+}
+	return (0);
 }
