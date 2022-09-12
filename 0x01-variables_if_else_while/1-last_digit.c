@@ -12,15 +12,15 @@ int main(void)
 				n = rand() - RAND_MAX / 6;
 				if (n>6)
 {
-					prinf("last %n is greater than 5");
+					prinf("last %d is greater than 5\n,n");
 }
 				else if (n==0)
 {
-				printf("Last %n is equal 0");
+				printf("Last %d is equal 0\n,n");
 }
 				else if (n<6)
 {
-				 printf("Last %n is less than 6");
+				 printf("Last %d is less than 6\n,n");
 }
 					return (0);
 
