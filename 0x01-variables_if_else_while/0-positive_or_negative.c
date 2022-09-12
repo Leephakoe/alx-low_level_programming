@@ -1,45 +1,34 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
- 
+/**
+ *
+ *  * main - entry point
+ *
+ *   * Description: prints  if a number is positive or negative.
+ *
+ *    * Return: 0
+ *
+ *     */
 
-int main () {
+int main(void)
+{
+		int n;
+			srand(time(0));
+				n = rand() - RAND_MAX / 2;
+					if (n > 0)
+					{		
+										printf("%d is positive\n", n);
 
-
-
-	   /* to print whether the number stored in the variable n is positive or negative */
-
-	   int n = 0;
-
-	    
-
-	      /* check the boolean condition */
-
-	      if( n>0 )
-
-		       {
-
-			             /* if condition is true then print the following */
-
-			             printf("%d if positive\n",n );
-
-				       } 
-
-	       else
-
-		        {
-
-				      /* if condition is false then print the following */
-
-				      printf(""%d is negative\n",n );
-
-				         }
-
-	          
-
-	          printf("value of n is : %d\n", n);
-
-		   
-
-		     return 0;
-
+										}
+						else if (n == 0)
+								{
+											printf("%d is zero\n", n);
+												}
+							else if (n < 0)
+									{
+												printf("%d is negative\n", n);
+													}
+								return (0);
 }
