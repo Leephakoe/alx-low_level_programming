@@ -1,17 +1,20 @@
-#include<unistd.h>
+#include "main.h"
 
-/** Main-prints putchar
+/**
+ * main - prints putchar
  * Return: always 0
+ */
 int main(void)
 {
-	_putchar('_')
-	 _putchar('p')	
-      	_putchar('u')
-	 _putchar('t')
-	  _putchar('c')
-	   _putchar('h')
-	    _putchar('a')
-	     _putchar('r')
-	      _putchar('\n')
-return (write(1,&dgfggfd
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+
+	return (0);
 }
