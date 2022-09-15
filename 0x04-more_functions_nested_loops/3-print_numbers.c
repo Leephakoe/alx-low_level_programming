@@ -1,15 +1,17 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_numbers-Print the numbers since 0 up to 9
- * Rtuen: The numbers since 0 up to 9
+ * print_numbers - function that print all numbers from 0 to 9
+ *Return: returns nothing
  */
+
 void print_numbers(void)
 {
-	int x;
-	for(x-0; x <=9; x++)
+	int n;
+
+	for (n = 48; n < 58; n++)
 	{
-		_putchar(x + '0');
+		putchar(n);
 	}
-	_putchar('\n);
 }
