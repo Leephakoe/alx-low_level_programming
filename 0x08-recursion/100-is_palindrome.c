@@ -1,18 +1,24 @@
 #include "main.h"
-#include <stdio.h>
+
+int find_strlen(char *s); 
+int check_palindrome(char *s, int len, int index);
+int is_palindrome(char *s);
 
 /**
- * last_index - returns the last index of a string (counts the null char)
- * @s: pointer the string
- * Return: int
+ * find_strlen - Returns the length of a string.
+ * @s: The string to be measured. 
+ *
+ * Return: The length of the string. 
  */
-
-int last_index(char *s)
+int find_strlen(char *s)  
 {
-	int n = 0;
+	int len = 0;
 
-	if (*s > '\0')
-		n += last_index(s + 1) + 1;
+	if (*(s + len))
+	{
+		len++;
+		len += find_strlen(s + len);
+	}
 
-	return (n);
+	 return (len); 
 }
