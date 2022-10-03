@@ -4,11 +4,12 @@
 /**
  * _strdup - Return pointer to a new string that duplicates given string,
  * allocate mem w/ malloc
- *
+ * @str: String to duplicate
  * Return: Pointer to new string, NULL if failed to make memory
  */
 char *_strdup(char *str)
 {
+
 	char *newStr;
 	unsigned int i, len;
 
