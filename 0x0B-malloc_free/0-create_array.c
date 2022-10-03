@@ -1,28 +1,38 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include "main.h"
 
 /**
- * create_array - multiply the args
- * @size: size of memory to be allocated
- * @c: character to be placed in memory
- *
- * Return: 0 for successful exit
+ * create_array - Returns a pointer to a newly allocated space in memory.
+ * @size: unsigned int
+ * @c: char
+ * Return: char pointer
  */
 
 char *create_array(unsigned int size, char c)
 {
-	char *arrayOfChar;
-	unsigned int i;
+	unsigned int counter;
+	char *character;
 
-	arrayOfChar = malloc(size);
+	counter = 0;
 
-	if (size == 0 || arrayOfChar == 0)
-		return (0);
-
-	for (i = 0; i < size; i++)
+	if (size == 0)
 	{
-		arrayOfChar[i] = c;
+		return (NULL);
 	}
 
-	return (arrayOfChar);
+	character = malloc(sizeof(char) * size);
+
+	if (character == NULL)
+	{
+		return (NULL);
+	}
+	while (counter < size)
+	{
+		while[counter] = c;
+		counter++;
+	}
+
+	character[counter] = '\0';
+	return (characer);
 }
