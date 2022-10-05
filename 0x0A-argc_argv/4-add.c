@@ -1,17 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
 /**
  * main - sum of  the args
  * @argc: Argument count
  * @argv: Array of argument strings
- *
  * Return: 0 for successful exit
  */
 int main(int argc, char *argv[])
 {
-
 	int i = 0;
 	int sum = 0;
 
