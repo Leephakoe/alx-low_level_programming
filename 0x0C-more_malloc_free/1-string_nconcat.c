@@ -1,40 +1,58 @@
-#include <stdlib.h>
-#include "main.h"
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * _strlen - returns the lenght of a string
+ * @s: poiter of characte
+ * Return: the length of a string
+ */
+int _strlen(char *s)
+{
+	unsigned int len;
+
+	len = 0;
+	while (*(s + len) != '\0')
+		len++;
+	return (len);
+}
 
 /**
-  * *string_nconcat - concatenates n bytes of a string to another string
-  * @s1: string to append to
-  * @s2: string to concatenate from
-  * @n: number of bytes from s2 to concatenate to s1
-  *
-  * Return: pointer to the resulting string
-  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+ * @s1: first string to concatenate
+ * @s2: second string to concatenate
+ * @n: number of bytes to concatenate
+ * Return: the pointer concatenate or null
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	        char *s;
-	        unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
-	        while (s1 && s1[len1])
-		                len1++;
-	        while (s2 && s2[len2])
-		                len2++;
-	        if (n < len2)
-		                s = malloc(sizeof(char) * (len1 + n + 1));
-	        else
-		                s = malloc(sizeof(char) * (len1 + len2 + 1));        if (!s)
-		                return (NULL); 
-	         while (i < len1) 
-		          {
-			                  s[i] = s1[i];
-			                  i++;
-			          } 
-	  
-	         while (n < len2 && i < (len1 + n)) 
-		                  s[i++] = s2[j++]; 
-	   
-	          while (n >= len2 && i < (len1 + len2)) 
-		                   s[i++] = s2[j++]; 
-	    
-	           s[i] = '\0'; 
-	     
-	            return (s); 
-	     }
+	unsigned int l1, i, j;
+	char *str;
+
+	/**verify if s1 or s2 is null*/
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	/**calculate the lenght of the strings*/
+	l1 = _strlen(s1);
+
+	/**asign the memorty to the pointer*/
+	str = malloc((l1 + (n * sizeof(*s2) + 1)) * sizeof(*str));
+
+	/**Verify if the memory is avaiable*/
+	if (str == NULL)
+		return (NULL);
+
+	/**Concatenate the string*/
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		str[i] = s1[i];
+	}
+
+	for (j = 0; s2[j] != '\0' && j < n; j++, i++)
+	{
+		str[i] = s2[j];
+	}
+	str[i] = '\0';
+	return (str);
+}
