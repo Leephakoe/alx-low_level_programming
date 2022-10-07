@@ -17,6 +17,7 @@ int _strlen(char *s)
 }
 
 /**
+ * *string_nconcat - concatenates two strings
  * @s1: first string to concatenate
  * @s2: second string to concatenate
  * @n: number of bytes to concatenate
