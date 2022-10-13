@@ -7,7 +7,7 @@
  */
 
 
-nt sum_them_all(const unsigned int n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i = 0;
 	int sum = 0;
