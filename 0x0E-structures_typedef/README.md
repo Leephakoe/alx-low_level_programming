@@ -1,1 +1,1 @@
-read solutions to task 0x0E
+##0x0E. C - Structures, typedef
