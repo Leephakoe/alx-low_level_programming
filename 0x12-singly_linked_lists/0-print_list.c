@@ -1,23 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
+
 /**
- * print_list - prints all the elements of a list_t list.
- * @h: singly linked list.
- * Return: number of elements in the list.
+ * list_len - calculte the number of elements in a linked list.
+ * @h: head of the liked list.
+ *
+ * Return: number of elements in the linked list.
  */
 
-size_t print_list(const list_t *h)
+size_t list_len(const list_t *h)
 {
-	size_t nelem;
+	size_t count = 0;
 
-	nelem = 0;
 	while (h != NULL)
 	{
-		if (h->str == NULL)
-			printf("[%d] %s\n", 0, "(nil)");
-		else
-			printf("[%d] %s\n", h->len, h->str);
+		count++;
 		h = h->next;
-		nelem++;
 	}
-	return (nelem);
+	return (count);
 }
