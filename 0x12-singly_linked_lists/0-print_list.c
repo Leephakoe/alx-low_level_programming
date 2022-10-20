@@ -1,22 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
- * list_len - calculte the number of elements in a linked list.
- * @h: head of the liked list.
+ * print_list - print elements of linkedlist
+ * @h: linked list
  *
- * Return: number of elements in the linked list.
+ * Return: number of nodes
  */
 
-size_t list_len(const list_t *h)
+size_t print_list(const list_t *h)
 {
-	size_t count = 0;
+	size_t nbr_nodes = 0;
+	const list_t *current = h;
 
-	while (h != NULL)
+	while (current != NULL)
 	{
-		count++;
-		h = h->next;
+		printf("[%d] %s\n", current->len,
+				current->str != NULL ? current->str : "(nil)");
+		current = current->next;
+		nbr_nodes++;
 	}
-	return (count);
+	return (nbr_nodes);
 }
