@@ -1,15 +1,13 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * print_list - print the elements of a linked list.
- * @h: liked list head.
+ * print_list - a function that prints all the elements of a list_t list
+ * @h: The linked list
  *
- * Return: amount of nodes of the linked list.
- *
+ * Return: The number of nodes
  */
-
 size_t print_list(const list_t *h)
 {
 	size_t count = 0;
@@ -17,11 +15,12 @@ size_t print_list(const list_t *h)
 	while (h != NULL)
 	{
 		if (h->str == NULL)
-			printf("[%d] %s\n", 0, "(nil)");
+			printf("[0] (nil)\n");
 		else
-			printf("[%u] %s\n", h->len, h->str);
+			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
 		count++;
 	}
+
 	return (count);
 }
